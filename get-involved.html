@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Get Involved | Colorado Warriors Hockey</title>
+  <meta name="description" content="Interested in playing, volunteering, or supporting Colorado Warriors Hockey? Get in touch.">
+  <link rel="icon" href="assets/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div data-header></div>
+
+<main id="main">
+  <section class="hero">
+    <video class="hero__media" autoplay muted loop playsinline preload="metadata">
+      <source src="videos/get-involved.mp4" type="video/mp4">
+    </video>
+    <button class="video-toggle" type="button">Pause video</button>
+    <div class="container hero__content">
+      <span class="eyebrow">Get Involved</span>
+      <h1>There’s a place for you here.</h1>
+      <p>Interested in playing, volunteering, or supporting the team? We’d love to hear from you.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container split" style="align-items:start">
+      <div class="reveal">
+        <span class="eyebrow">Start a conversation</span>
+        <h2>Tell us what you’re interested in</h2>
+        <p class="lead">Whether you’re a veteran interested in playing or someone who wants to help, reach out and we’ll point you in the right direction.</p>
+
+        <div class="card">
+          <h3>Contact the team</h3>
+          <p>
+            <strong>Email:</strong>
+            <a href="mailto:info@example.org">info@example.org</a><br>
+            <strong>Phone:</strong>
+            <a href="tel:+17195550100">(719) 555-0100</a><br>
+            <strong>Location:</strong> Colorado Springs &amp; Denver, Colorado
+          </p>
+          <p class="sponsor-note">Contact details are placeholders; replace them before publishing.</p>
+        </div>
+      </div>
+
+      <form class="form reveal" action="mailto:info@example.org" method="post" enctype="text/plain">
+        <h3>Send us a message</h3>
+
+        <label for="interest">I’m interested in
+          <select id="interest" name="Interest" required>
+            <option value="">Choose one</option>
+            <option value="Playing hockey">Playing hockey</option>
+            <option value="Volunteering">Volunteering</option>
+            <option value="Sponsoring the team">Sponsoring the team</option>
+            <option value="Donating">Donating</option>
+            <option value="Something else">Something else</option>
+          </select>
+        </label>
+
+        <label for="name">Name
+          <input id="name" name="Name" type="text" autocomplete="name" required>
+        </label>
+
+        <label for="email">Email
+          <input id="email" name="Email" type="email" autocomplete="email" required>
+        </label>
+
+        <label for="phone">Phone (optional)
+          <input id="phone" name="Phone" type="tel" autocomplete="tel">
+        </label>
+
+        <label for="message">Message
+          <textarea id="message" name="Message" rows="5" required></textarea>
+        </label>
+
+        <button class="btn" type="submit">Continue to email</button>
+        <p class="sponsor-note">This form opens your email app to send the message. Replace the placeholder email address above before using it.</p>
+      </form>
+    </div>
+  </section>
+
+  <section class="section section--maroon center">
+    <div class="container reveal">
+      <h2>Not sure where to start?</h2>
+      <p class="lead">That’s okay. Send us a note and we’ll help you figure out the next step.</p>
+      <a href="mailto:info@example.org" class="btn btn--white">Email the team</a>
+    </div>
+  </section>
+</main>
+
+<div data-footer></div>
+<script src="main.js"></script>
+</body>
+</html>
