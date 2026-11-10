@@ -27,6 +27,30 @@ document.querySelector('[data-header]').outerHTML = `
 
 document.querySelector('[data-footer]').outerHTML = `
 <footer class="site-footer">
+  <section class="footer-sponsors" aria-labelledby="footer-sponsors-heading">
+    <div class="container">
+      <p class="footer-sponsors__eyebrow">Proud supporters</p>
+      <h2 class="footer-sponsors__heading" id="footer-sponsors-heading">Our sponsors</h2>
+      <div class="footer-sponsors__logos">
+        <a class="footer-sponsor" href="https://peaklandscapesllc.com/" target="_blank" rel="noopener noreferrer">
+          <img src="image/Peak-Landscapes.jpg" alt="Peak Landscapes LLC">
+        </a>
+        <a class="footer-sponsor" href="https://operationhattrick.org/" target="_blank" rel="noopener noreferrer">
+          <img src="image/Operation-Hat-Trick.jpg" alt="Operation Hat Trick">
+        </a>
+        <a class="footer-sponsor" href="https://www.beatonbrotherspropertyexperts.com/" target="_blank" rel="noopener noreferrer">
+          <img src="image/Beaton-Brothers-2.jpg" alt="Beaton Brothers Property Experts">
+        </a>
+        <a class="footer-sponsor" href="https://sickmittshockey.com/" target="_blank" rel="noopener noreferrer">
+          <img src="image/sickmitts-wht-logo.jpg" alt="Sickmitts">
+        </a>
+        <a class="footer-sponsor" href="https://urbaninterface.it.com" target="_blank" rel="noopener noreferrer">
+          <img src="image/Urban-Interface.jpg" alt="Urban Interface">
+        </a>
+      </div>
+      <a class="footer-sponsors__link" href="support.html#our-sponsors">Learn about our sponsors <span aria-hidden="true">→</span></a>
+    </div>
+  </section>
   <div class="container footer-grid">
     <div>
       <img class="footer-logo" src="image/Warriors Logo.jpg" alt="Colorado Warriors Hockey logo">
