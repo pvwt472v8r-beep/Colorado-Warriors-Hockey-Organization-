@@ -85,7 +85,26 @@ p{margin:0 0 1em}
 .grid--2{grid-template-columns:repeat(auto-fit,minmax(320px,1fr))}
 .card{background:#fff;padding:2rem;border-radius:var(--radius);box-shadow:var(--shadow);border-top:4px solid var(--maroon)}
 .card{transition:transform .3s,box-shadow .3s}
-.card:hover{transform:translateY(-6px);box-shadow:var(--shadow-lg)}
+@media (hover:hover){
+  .card:hover{transform:translateY(-6px);box-shadow:0 18px 42px rgba(122,39,51,.28)}
+}
+.level-card{
+  --level-color:#7A2733;
+  --level-tint:rgba(122,39,51,.1);
+  --level-shadow:rgba(122,39,51,.38);
+  border-top-color:var(--level-color);
+}
+.level-card--platinum{--level-color:#8C929B;--level-tint:rgba(140,146,155,.17);--level-shadow:rgba(140,146,155,.42)}
+.level-card--gold{--level-color:#B68A32;--level-tint:rgba(182,138,50,.16);--level-shadow:rgba(182,138,50,.42)}
+.level-card--silver{--level-color:#9AA8B5;--level-tint:rgba(154,168,181,.2);--level-shadow:rgba(154,168,181,.45)}
+.level-card--copper{--level-color:#B66D45;--level-tint:rgba(182,109,69,.17);--level-shadow:rgba(182,109,69,.42)}
+.level-card--bronze{--level-color:#986344;--level-tint:rgba(152,99,68,.17);--level-shadow:rgba(152,99,68,.42)}
+@media (hover:hover){
+  .level-card:hover{
+    background:linear-gradient(145deg,#fff 45%,var(--level-tint));
+    box-shadow:0 18px 42px var(--level-shadow);
+  }
+}
 .card .tag{display:inline-block;font-size:.72rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--maroon);margin-bottom:.5rem}
 .card--dark{background:var(--ink);color:var(--grey-light);border-top-color:var(--maroon)}
 .card--dark h3{color:#fff}
@@ -142,8 +161,7 @@ p{margin:0 0 1em}
 /* Reveal */
 .reveal{opacity:0;transform:translateY(24px);transition:opacity .7s,transform .7s}
 .reveal.in{opacity:1;transform:none}
-.card.reveal{transition:opacity .7s,transform .3s,box-shadow .3s}
-.card.reveal.in:hover{transform:translateY(-6px)}
+.card.reveal{transition:opacity .7s,transform .3s,box-shadow .3s,background .3s}
 
 @media (max-width:900px){
   .split,.footer-grid{grid-template-columns:1fr}
