@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Photos & Videos | Colorado Warriors Hockey</title>
+  <meta name="description" content="See Colorado Warriors Hockey on the ice, in the locker room, and out in the community.">
+  <link rel="icon" href="assets/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div data-header></div>
+
+<main id="main">
+  <section class="hero">
+    <video class="hero__media" autoplay muted loop playsinline preload="metadata">
+      <source src="videos/photos.mp4" type="video/mp4">
+    </video>
+    <button class="video-toggle" type="button">Pause video</button>
+    <div class="container hero__content">
+      <span class="eyebrow">Photos &amp; Videos</span>
+      <h1>Our team, on and off the ice.</h1>
+      <p>Game days, team moments, community events, and the people who make it all matter.</p>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="gallery-heading">
+    <div class="container">
+      <div class="center reveal">
+        <span class="eyebrow">The photo gallery</span>
+        <h2 id="gallery-heading">Take a closer look</h2>
+      </div>
+
+      <nav class="gallery-filters" aria-label="Filter photos">
+        <button class="gallery-filter" type="button" data-filter="all" aria-pressed="true">All</button>
+        <button class="gallery-filter" type="button" data-filter="locker-room" aria-pressed="false">The Locker Room</button>
+        <button class="gallery-filter" type="button" data-filter="on-the-ice" aria-pressed="false">On the Ice</button>
+        <button class="gallery-filter" type="button" data-filter="community-outreach" aria-pressed="false">Community Outreach</button>
+        <button class="gallery-filter" type="button" data-filter="national-tournaments" aria-pressed="false">National Tournaments</button>
+      </nav>
+
+      <p class="gallery-status" aria-live="polite"></p>
+
+      <div class="gallery">
+        <figure class="gallery-item reveal" data-category="locker-room">
+          <div class="ph" role="img" aria-label="Locker room photo placeholder">Locker room photo</div>
+          <figcaption>Placeholder — The Locker Room</figcaption>
+        </figure>
+        <figure class="gallery-item reveal" data-category="locker-room">
+          <div class="ph" role="img" aria-label="Team gathering photo placeholder">Team gathering photo</div>
+          <figcaption>Placeholder — Team moments</figcaption>
+        </figure>
+        <figure class="gallery-item reveal" data-category="on-the-ice">
+          <div class="ph" role="img" aria-label="Practice photo placeholder">Practice photo</div>
+          <figcaption>Placeholder — On the Ice</figcaption>
+        </figure>
+        <figure class="gallery-item reveal" data-category="on-the-ice">
+          <div class="ph" role="img" aria-label="Game photo placeholder">Game photo</div>
+          <figcaption>Placeholder — Game day</figcaption>
+        </figure>
+        <figure class="gallery-item reveal" data-category="community-outreach">
+          <div class="ph" role="img" aria-label="Community event photo placeholder">Community event photo</div>
+          <figcaption>Placeholder — Community Outreach</figcaption>
+        </figure>
+        <figure class="gallery-item reveal" data-category="community-outreach">
+          <div class="ph" role="img" aria-label="Volunteer photo placeholder">Volunteer photo</div>
+          <figcaption>Placeholder — Volunteering together</figcaption>
+        </figure>
+        <figure class="gallery-item reveal" data-category="national-tournaments">
+          <div class="ph" role="img" aria-label="Tournament photo placeholder">Tournament photo</div>
+          <figcaption>Placeholder — National Tournaments</figcaption>
+        </figure>
+        <figure class="gallery-item reveal" data-category="national-tournaments">
+          <div class="ph" role="img" aria-label="Tournament team photo placeholder">Tournament team photo</div>
+          <figcaption>Placeholder — Tournament team</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--dark" aria-labelledby="practice-videos-heading">
+    <div class="container">
+      <div class="center reveal">
+        <span class="eyebrow">From the rink</span>
+        <h2 id="practice-videos-heading">See the teams in action</h2>
+        <p class="lead">A look at practices, progress, and the fun of playing together.</p>
+      </div>
+
+      <div class="grid grid--2 practice-videos">
+        <article class="reveal">
+          <h3>Competitive team practices</h3>
+          <video controls playsinline preload="metadata">
+            <source src="videos/competitive-practice.mp4" type="video/mp4">
+            Your browser does not support video playback.
+          </video>
+        </article>
+
+        <article class="reveal">
+          <h3>Development team practices</h3>
+          <video controls playsinline preload="metadata">
+            <source src="videos/development-practice.mp4" type="video/mp4">
+            Your browser does not support video playback.
+          </video>
+        </article>
+      </div>
+    </div>
+  </section>
+</main>
+
+<div data-footer></div>
+<script src="main.js"></script>
+</body>
+</html>
