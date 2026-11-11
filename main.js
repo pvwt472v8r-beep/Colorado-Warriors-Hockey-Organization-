@@ -110,6 +110,19 @@ window.matchMedia('(max-width: 1100px)').addEventListener('change', event => {
   if (!event.matches) setMenuOpen(false);
 });
 
+const seasonEvents = document.querySelector('#season-events');
+if (seasonEvents) {
+  const today = new Intl.DateTimeFormat('sv-SE', {
+    timeZone: 'America/Denver', year: 'numeric', month: '2-digit', day: '2-digit'
+  }).format(new Date());
+  const upcoming = [...seasonEvents.children].filter(event => event.dataset.end >= today).slice(0, 3);
+  const nextEvents = document.querySelector('#next-events');
+  const nextEventsList = document.querySelector('#next-events-list');
+  upcoming.forEach(event => nextEventsList.append(event.cloneNode(true)));
+  document.querySelector('#no-upcoming-events').hidden = upcoming.length > 0;
+  nextEvents.hidden = false;
+}
+
 const revealObserver = new IntersectionObserver(entries => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {

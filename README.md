@@ -21,3 +21,13 @@ Save each logo in the `image` folder. In `support.html`, find the matching
 ```
 
 Use the actual file name and a suitable alt text for each store.
+
+## Updating season events
+
+Edit the events in `support.html` inside `#season-events`, in the intended
+display order. Each event's `data-end` uses `YYYY-MM-DD`; it is the last day
+the event should appear in "Coming up next" (use the end of the month or date
+range for an undated event). The first three events whose end dates have not
+passed in Colorado are displayed automatically. The complete season stays
+available under "View full season". Update or remove tentative events as
+details are confirmed, and replace the season list when the calendar changes.
