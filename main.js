@@ -17,8 +17,8 @@ document.querySelector('[data-header]').outerHTML = `
       <img src="image/Warriors Logo.jpg" alt="">
       <span>Colorado Warriors<small>Hockey</small></span>
     </a>
-    <button class="menu-toggle" aria-label="Menu" aria-expanded="false"><span></span></button>
-    <ul class="nav-links">
+    <button class="menu-toggle" aria-label="Menu" aria-expanded="false" aria-controls="primary-navigation"><span></span></button>
+    <ul class="nav-links" id="primary-navigation">
       ${NAV.map(([file, label]) => `<li><a href="${file}"${cur(file)}>${label}</a></li>`).join('')}
       <li><a href="get-involved.html" class="btn"${cur('get-involved.html')}>Get Involved</a></li>
     </ul>
@@ -81,10 +81,25 @@ window.addEventListener('scroll', onScroll, { passive: true });
 const toggle = document.querySelector('.menu-toggle');
 const links = document.querySelector('.nav-links');
 
-toggle.addEventListener('click', () => {
-  const open = links.classList.toggle('open');
+const setMenuOpen = open => {
+  links.classList.toggle('open', open);
   toggle.setAttribute('aria-expanded', open);
   document.body.style.overflow = open ? 'hidden' : '';
+};
+
+toggle.addEventListener('click', () => {
+  setMenuOpen(!links.classList.contains('open'));
+});
+
+document.addEventListener('keydown', event => {
+  if (event.key === 'Escape' && links.classList.contains('open')) {
+    setMenuOpen(false);
+    toggle.focus();
+  }
+});
+
+window.matchMedia('(max-width: 900px)').addEventListener('change', event => {
+  if (!event.matches) setMenuOpen(false);
 });
 
 const revealObserver = new IntersectionObserver(entries => {
