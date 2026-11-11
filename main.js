@@ -20,6 +20,7 @@ document.querySelector('[data-header]').outerHTML = `
     <button class="menu-toggle" aria-label="Menu" aria-expanded="false" aria-controls="primary-navigation"><span></span></button>
     <ul class="nav-links" id="primary-navigation">
       ${NAV.map(([file, label]) => `<li><a href="${file}"${cur(file)}>${label}</a></li>`).join('')}
+      <li><a href="support.html#shop">Shop</a></li>
       <li><a href="get-involved.html" class="btn"${cur('get-involved.html')}>Get Involved</a></li>
     </ul>
   </div>
@@ -91,6 +92,10 @@ toggle.addEventListener('click', () => {
   setMenuOpen(!links.classList.contains('open'));
 });
 
+links.addEventListener('click', event => {
+  if (event.target.closest('a') && links.classList.contains('open')) setMenuOpen(false);
+});
+
 document.addEventListener('keydown', event => {
   if (event.key === 'Escape' && links.classList.contains('open')) {
     setMenuOpen(false);
@@ -98,7 +103,7 @@ document.addEventListener('keydown', event => {
   }
 });
 
-window.matchMedia('(max-width: 900px)').addEventListener('change', event => {
+window.matchMedia('(max-width: 1100px)').addEventListener('change', event => {
   if (!event.matches) setMenuOpen(false);
 });
 

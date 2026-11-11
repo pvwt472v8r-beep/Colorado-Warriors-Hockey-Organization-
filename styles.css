@@ -47,7 +47,7 @@ p{margin:0 0 1em}
 .scrolled .logo img{height:46px}
 .logo small{display:block;font-family:var(--font-body);font-size:.68rem;letter-spacing:.2em;color:var(--grey)}
 .nav-links{display:flex;align-items:center;gap:2rem;list-style:none;margin:0;padding:0}
-.nav-links a{color:#fff;text-decoration:none;font-size:.85rem;text-transform:uppercase;letter-spacing:.12em;font-weight:600;padding:.4rem 0;border-bottom:2px solid transparent;transition:.2s}
+.nav-links a{color:#fff;text-decoration:none;font-size:.85rem;text-transform:uppercase;letter-spacing:.12em;font-weight:600;padding:.4rem 0;border-bottom:2px solid transparent;transition:.2s;white-space:nowrap}
 .nav-links a:hover,.nav-links a[aria-current="page"]{border-color:var(--maroon)}
 .nav-links .btn{padding:.7rem 1.3rem;border:2px solid var(--maroon)}
 .nav-links .btn:hover{border-color:var(--maroon-dark)}
@@ -83,6 +83,7 @@ p{margin:0 0 1em}
 .grid--4{grid-template-columns:repeat(auto-fit,minmax(230px,1fr))}
 .grid--5{grid-template-columns:repeat(auto-fit,minmax(200px,1fr))}
 .grid--2{grid-template-columns:repeat(auto-fit,minmax(320px,1fr))}
+.grid--shop{grid-template-columns:repeat(auto-fit,minmax(min(100%,270px),1fr));max-width:820px;margin-inline:auto}
 .card{background:#fff;padding:2rem;border-radius:var(--radius);box-shadow:var(--shadow);border-top:4px solid var(--maroon)}
 .card{transition:transform .3s,box-shadow .3s}
 @media (hover:hover){
@@ -108,6 +109,11 @@ p{margin:0 0 1em}
 .card .tag{display:inline-block;font-size:.72rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--maroon);margin-bottom:.5rem}
 .card--dark{background:var(--ink);color:var(--grey-light);border-top-color:var(--maroon)}
 .card--dark h3{color:#fff}
+#shop{scroll-margin-top:80px}
+.shop-card{display:flex;flex-direction:column;align-items:center;text-align:center}
+.shop-card p{flex-grow:1}
+.shop-logo{width:100%;height:100px;object-fit:contain;margin-bottom:1.5rem}
+.shop-logo-placeholder{display:grid;place-items:center;width:100%;height:100px;margin-bottom:1.5rem;border:1px dashed var(--grey);border-radius:8px;color:#555;font-size:.85rem}
 .person{text-align:center}
 .avatar{width:120px;height:120px;border-radius:50%;margin:0 auto 1rem;background:linear-gradient(135deg,var(--maroon),var(--black));display:grid;place-items:center;color:#fff;font:600 2.2rem}
 .person .role{color:var(--maroon);font-weight:700;font-size:.85rem;letter-spacing:.1em;text-transform:uppercase;margin:0}
@@ -165,9 +171,15 @@ p{margin:0 0 1em}
 .reveal.in{opacity:1;transform:none}
 .card.reveal{transition:opacity .7s,transform .3s,box-shadow .3s,background .3s}
 
+@media (min-width:1101px) and (max-width:1200px){
+  .nav-links{gap:1rem}
+  .logo{font-size:1.1rem}
+}
 @media (max-width:900px){
   .split{grid-template-columns:1fr}
   .footer-sponsors__logos{grid-template-columns:repeat(3,minmax(0,1fr))}
+}
+@media (max-width:1100px){
   .site-header.scrolled,.site-header.solid{backdrop-filter:none}
   .menu-toggle{display:block}
   .nav-links{position:fixed;inset:0;background:var(--black);flex-direction:column;gap:1.6rem;padding:5.5rem 1rem max(2rem,env(safe-area-inset-bottom));overflow-y:auto;transform:translateX(100%);visibility:hidden;transition:transform .35s,visibility 0s .35s;z-index:110}
