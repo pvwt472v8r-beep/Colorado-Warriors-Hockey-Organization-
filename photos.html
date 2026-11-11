@@ -55,12 +55,16 @@
           <figcaption>Placeholder — Team moments</figcaption>
         </figure>
         <figure class="gallery-item reveal" data-category="on-the-ice">
-          <div class="ph" role="img" aria-label="Practice photo placeholder">Practice photo</div>
-          <figcaption>Placeholder — On the Ice</figcaption>
+          <a class="gallery-photo" href="image/Face%20Off.jpg" aria-label="Enlarge: Colorado Warriors player at a faceoff">
+            <img src="image/Face%20Off.jpg" alt="Colorado Warriors player at a faceoff" loading="lazy">
+          </a>
+          <figcaption>On the Ice — Faceoff</figcaption>
         </figure>
         <figure class="gallery-item reveal" data-category="on-the-ice">
-          <div class="ph" role="img" aria-label="Game photo placeholder">Game photo</div>
-          <figcaption>Placeholder — Game day</figcaption>
+          <a class="gallery-photo" href="image/In%20front%20of%20Net.jpg" aria-label="Enlarge: Colorado Warriors teammates gathered near the net">
+            <img src="image/In%20front%20of%20Net.jpg" alt="Colorado Warriors teammates gathered near the net" loading="lazy">
+          </a>
+          <figcaption>On the Ice — Together as a team</figcaption>
         </figure>
         <figure class="gallery-item reveal" data-category="community-outreach">
           <div class="ph" role="img" aria-label="Community event photo placeholder">Community event photo</div>
@@ -110,6 +114,17 @@
     </div>
   </section>
 </main>
+
+<dialog class="lightbox" aria-label="Photo viewer" aria-describedby="lightbox-caption">
+  <button class="lightbox__close" type="button" aria-label="Close photo viewer">&times;</button>
+  <div class="lightbox__stage">
+    <button class="lightbox__prev" type="button" aria-label="Previous photo">&#8249;</button>
+    <img class="lightbox__image" alt="">
+    <p class="lightbox__error" role="alert" hidden>Unable to load this photo. Please try another.</p>
+    <button class="lightbox__next" type="button" aria-label="Next photo">&#8250;</button>
+  </div>
+  <p class="lightbox__caption" id="lightbox-caption" aria-live="polite"></p>
+</dialog>
 
 <div data-footer></div>
 <script src="main.js"></script>
