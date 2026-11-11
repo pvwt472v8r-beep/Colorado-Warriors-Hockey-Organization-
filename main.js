@@ -48,7 +48,6 @@ document.querySelector('[data-footer]').outerHTML = `
           <img src="image/Urban-Interface.jpg" alt="Urban Interface">
         </a>
       </div>
-      <a class="footer-sponsors__link" href="support.html#our-sponsors">Learn about our sponsors <span aria-hidden="true">→</span></a>
     </div>
   </section>
   <div class="container footer-grid">
@@ -57,17 +56,14 @@ document.querySelector('[data-footer]').outerHTML = `
       <p>A nonprofit that brings disabled veterans together through hockey. Every skill level welcome.</p>
     </div>
     <div>
-      <h3>Explore</h3>
-      <ul>${NAV.map(([file, label]) => `<li><a href="${file}">${label}</a></li>`).join('')}
-        <li><a href="get-involved.html">Get Involved</a></li>
-      </ul>
-    </div>
-    <div>
-      <h3>Contact</h3>
+      <h3>Connect with us</h3>
       <p>Colorado Springs &amp; Denver, CO<br>
-        <a href="mailto:info@example.org">info@example.org</a><br>
-        (719) 555-0100
+        <a href="get-involved.html">Contact the team</a>
       </p>
+      <div class="footer-social" aria-label="Social media">
+        <a href="https://www.instagram.com/colorado_warriors_hockey?psln=bXllNm9lZnlzdTZu" target="_blank" rel="noopener noreferrer">Instagram</a>
+        <a href="https://www.facebook.com/people/Colorado-Warriors-Hockey/61585638647465/?mibextid=wwXIfr&amp;rdid=58AlwcTXfV3Vj7is&amp;share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1Btepu5Feq%2F%3Fmibextid%3DwwXIfr" target="_blank" rel="noopener noreferrer">Facebook</a>
+      </div>
     </div>
   </div>
   <p class="copyright">&copy; 2026 Colorado Warriors Hockey · 501(c)(3) nonprofit</p>
