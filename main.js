@@ -48,6 +48,9 @@ document.querySelector('[data-footer]').outerHTML = `
         <a class="footer-sponsor footer-sponsor--dark-art" href="https://urbaninterface.it.com" target="_blank" rel="noopener noreferrer">
           <img src="image/Urban-Interface.jpg" alt="Urban Interface">
         </a>
+        <div class="footer-sponsor footer-sponsor--dark-art">
+          <img src="image/Tales.jpg" alt="Tales from the Lender">
+        </div>
       </div>
     </div>
   </section>
