@@ -147,17 +147,18 @@ p{margin:0 0 1em}
 .footer-sponsor img{display:block;width:100%;height:64px;object-fit:contain}
 .footer-sponsor--dark-art img{mix-blend-mode:screen}
 .footer-sponsor--peak img{filter:grayscale(1) invert(1);mix-blend-mode:screen}
-.footer-grid{display:grid;grid-template-columns:1.4fr 1fr;gap:2.5rem}
-.footer-grid > div:first-child p{max-width:42ch}
-.footer-social{display:flex;flex-wrap:wrap;gap:1.25rem}
-.footer-social a{font-weight:600}
-.site-footer h3{color:#fff;font-size:1.05rem}
+.footer-follow{text-align:center}
+.footer-follow h2{color:#fff;font-size:1.35rem}
+.footer-follow h2::after{display:none}
+.footer-social{display:flex;justify-content:center;gap:1rem}
+.footer-social a{display:grid;place-items:center;width:48px;height:48px;border:1px solid #d9a0a8;border-radius:50%;transition:background .25s,border-color .25s,transform .25s}
+.footer-social a:hover{background:var(--maroon);border-color:var(--maroon);transform:translateY(-2px)}
+.footer-social svg{width:21px;height:21px}
 .site-footer a{color:var(--grey-light);text-decoration:none}
-.site-footer a:hover{color:#fff;text-decoration:underline}
-.site-footer ul{list-style:none;margin:0;padding:0}
-.site-footer li{margin-bottom:.4rem}
-.footer-logo{height:96px;width:auto;margin-bottom:1rem;background:#fff;border-radius:12px;padding:4px}
-.copyright{margin:2.5rem auto 0;padding-top:1.5rem;border-top:1px solid #2a2a2e;font-size:.85rem;width:min(92%,var(--max))}
+.site-footer a:hover{color:#fff}
+.footer-bottom{display:flex;align-items:center;justify-content:space-between;gap:1rem;margin-top:3rem;padding-top:1.5rem;border-top:1px solid #2a2a2e}
+.footer-logo{height:64px;width:auto;flex-shrink:0;background:#fff;border-radius:10px;padding:3px}
+.copyright{margin:0;font-size:.85rem}
 
 /* Reveal */
 .reveal{opacity:0;transform:translateY(24px);transition:opacity .7s,transform .7s}
@@ -165,7 +166,7 @@ p{margin:0 0 1em}
 .card.reveal{transition:opacity .7s,transform .3s,box-shadow .3s,background .3s}
 
 @media (max-width:900px){
-  .split,.footer-grid{grid-template-columns:1fr}
+  .split{grid-template-columns:1fr}
   .footer-sponsors__logos{grid-template-columns:repeat(3,minmax(0,1fr))}
   .menu-toggle{display:block}
   .nav-links{position:fixed;inset:0;background:var(--black);flex-direction:column;justify-content:center;gap:1.6rem;transform:translateX(100%);transition:transform .35s;z-index:110}

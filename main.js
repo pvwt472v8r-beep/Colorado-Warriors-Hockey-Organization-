@@ -50,23 +50,27 @@ document.querySelector('[data-footer]').outerHTML = `
       </div>
     </div>
   </section>
-  <div class="container footer-grid">
-    <div>
-      <img class="footer-logo" src="image/Warriors Logo.jpg" alt="Colorado Warriors Hockey logo">
-      <p>A nonprofit that brings disabled veterans together through hockey. Every skill level welcome.</p>
+  <section class="footer-follow container" aria-labelledby="footer-follow-heading">
+    <h2 id="footer-follow-heading">Follow Us</h2>
+    <div class="footer-social">
+      <a href="https://www.instagram.com/colorado_warriors_hockey?psln=bXllNm9lZnlzdTZu" target="_blank" rel="noopener noreferrer" aria-label="Colorado Warriors Hockey on Instagram (opens in a new tab)">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" focusable="false">
+          <rect x="3" y="3" width="18" height="18" rx="5"></rect>
+          <circle cx="12" cy="12" r="4"></circle>
+          <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"></circle>
+        </svg>
+      </a>
+      <a href="https://www.facebook.com/people/Colorado-Warriors-Hockey/61585638647465/?mibextid=wwXIfr&amp;rdid=58AlwcTXfV3Vj7is&amp;share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1Btepu5Feq%2F%3Fmibextid%3DwwXIfr" target="_blank" rel="noopener noreferrer" aria-label="Colorado Warriors Hockey on Facebook (opens in a new tab)">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
+          <path d="M14 8V6.5c0-.7.2-1 1.1-1H17V2h-2.8C11.2 2 10 3.7 10 6v2H7.5v3.5H10V22h4V11.5h2.7L17 8z"></path>
+        </svg>
+      </a>
     </div>
-    <div>
-      <h3>Connect with us</h3>
-      <p>Colorado Springs &amp; Denver, CO<br>
-        <a href="get-involved.html">Contact the team</a>
-      </p>
-      <div class="footer-social" aria-label="Social media">
-        <a href="https://www.instagram.com/colorado_warriors_hockey?psln=bXllNm9lZnlzdTZu" target="_blank" rel="noopener noreferrer">Instagram</a>
-        <a href="https://www.facebook.com/people/Colorado-Warriors-Hockey/61585638647465/?mibextid=wwXIfr&amp;rdid=58AlwcTXfV3Vj7is&amp;share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1Btepu5Feq%2F%3Fmibextid%3DwwXIfr" target="_blank" rel="noopener noreferrer">Facebook</a>
-      </div>
-    </div>
+  </section>
+  <div class="container footer-bottom">
+    <p class="copyright">&copy; 2026 Colorado Warriors Hockey · 501(c)(3) nonprofit</p>
+    <img class="footer-logo" src="image/Warriors Logo.jpg" alt="Colorado Warriors Hockey logo">
   </div>
-  <p class="copyright">&copy; 2026 Colorado Warriors Hockey · 501(c)(3) nonprofit</p>
 </footer>`;
 
 const header = document.querySelector('.site-header');
