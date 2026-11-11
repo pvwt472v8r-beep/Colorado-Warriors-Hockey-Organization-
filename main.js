@@ -133,6 +133,82 @@ if (filterButtons.length && galleryItems.length) {
   updateGallery('all');
 }
 
+// Browse the photos in the same category as the selected image.
+const lightbox = document.querySelector('.lightbox');
+if (lightbox && typeof lightbox.showModal === 'function') {
+  const image = lightbox.querySelector('.lightbox__image');
+  const caption = lightbox.querySelector('.lightbox__caption');
+  const error = lightbox.querySelector('.lightbox__error');
+  const previous = lightbox.querySelector('.lightbox__prev');
+  const next = lightbox.querySelector('.lightbox__next');
+  const close = lightbox.querySelector('.lightbox__close');
+  const stage = lightbox.querySelector('.lightbox__stage');
+  let photos = [];
+  let index = 0;
+  let opener = null;
+
+  const showPhoto = () => {
+    const photo = photos[index];
+    const thumbnail = photo.querySelector('img');
+    const description = photo.closest('.gallery-item').querySelector('figcaption');
+    image.hidden = false;
+    error.hidden = true;
+    image.alt = thumbnail.alt;
+    caption.textContent = `${description ? description.textContent : thumbnail.alt} (${index + 1} of ${photos.length})`;
+    image.src = photo.href;
+    previous.disabled = photos.length < 2;
+    next.disabled = photos.length < 2;
+  };
+
+  document.querySelector('.gallery').addEventListener('click', event => {
+    const photo = event.target.closest('.gallery-photo');
+    if (!photo || event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+    const item = photo.closest('.gallery-item');
+    photos = Array.from(galleryItems)
+      .filter(candidate => !candidate.hidden && candidate.dataset.category === item.dataset.category)
+      .map(candidate => candidate.querySelector('.gallery-photo'))
+      .filter(candidate => candidate && candidate.querySelector('img'));
+    index = photos.indexOf(photo);
+    if (index < 0) return;
+    event.preventDefault();
+    opener = photo;
+    showPhoto();
+    lightbox.showModal();
+    document.body.classList.add('lightbox-open');
+    close.focus();
+  });
+
+  image.addEventListener('error', () => {
+    image.hidden = true;
+    error.hidden = false;
+  });
+  previous.addEventListener('click', () => {
+    index = (index - 1 + photos.length) % photos.length;
+    showPhoto();
+  });
+  next.addEventListener('click', () => {
+    index = (index + 1) % photos.length;
+    showPhoto();
+  });
+  close.addEventListener('click', () => lightbox.close());
+  lightbox.addEventListener('click', event => {
+    if (event.target === lightbox || event.target === stage) lightbox.close();
+  });
+  lightbox.addEventListener('keydown', event => {
+    if (event.key === 'ArrowLeft' && !previous.disabled) {
+      event.preventDefault();
+      previous.click();
+    } else if (event.key === 'ArrowRight' && !next.disabled) {
+      event.preventDefault();
+      next.click();
+    }
+  });
+  lightbox.addEventListener('close', () => {
+    document.body.classList.remove('lightbox-open');
+    if (opener) opener.focus();
+  });
+}
+
 // Pause hero videos when offscreen and provide a visitor control.
 const reduceMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
 
