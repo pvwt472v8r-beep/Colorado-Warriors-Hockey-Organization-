@@ -168,9 +168,12 @@ p{margin:0 0 1em}
 @media (max-width:900px){
   .split{grid-template-columns:1fr}
   .footer-sponsors__logos{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .site-header.scrolled,.site-header.solid{backdrop-filter:none}
   .menu-toggle{display:block}
-  .nav-links{position:fixed;inset:0;background:var(--black);flex-direction:column;justify-content:center;gap:1.6rem;transform:translateX(100%);transition:transform .35s;z-index:110}
-  .nav-links.open{transform:none}
+  .nav-links{position:fixed;inset:0;background:var(--black);flex-direction:column;gap:1.6rem;padding:5.5rem 1rem max(2rem,env(safe-area-inset-bottom));overflow-y:auto;transform:translateX(100%);visibility:hidden;transition:transform .35s,visibility 0s .35s;z-index:110}
+  .nav-links.open{transform:none;visibility:visible;transition:transform .35s,visibility 0s}
+  .nav-links li:first-child{margin-top:auto}
+  .nav-links li:last-child{margin-bottom:auto}
   .nav-links a{font-size:1.1rem}
   .logo small{display:none}
 }
