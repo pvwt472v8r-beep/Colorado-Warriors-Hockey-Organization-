@@ -126,7 +126,8 @@ p{margin:0 0 1em}
 @media (max-width:600px){.event{grid-template-columns:1fr;gap:.35rem}}
 .person{text-align:center}
 .avatar{position:relative;width:120px;height:120px;border-radius:50%;overflow:hidden;margin:0 auto 1rem;background:linear-gradient(135deg,var(--maroon),var(--black));display:grid;place-items:center;color:#fff;font:600 2.2rem}
-.avatar img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;background:var(--black)}
+.avatar::after{content:"";position:absolute;inset:0;border:4px solid #fff;border-radius:50%;pointer-events:none}
+.avatar img{position:absolute;left:50%;top:50%;width:var(--photo-width,100%);height:auto;max-width:none;transform:translate(var(--photo-x,-50%),var(--photo-y,-50%));background:var(--black)}
 .person .role{color:var(--maroon);font-weight:700;font-size:.85rem;letter-spacing:.1em;text-transform:uppercase;margin:0}
 
 .split{display:grid;grid-template-columns:1fr 1fr;gap:3.5rem;align-items:center}
