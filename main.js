@@ -51,6 +51,9 @@ document.querySelector('[data-footer]').outerHTML = `
         <div class="footer-sponsor footer-sponsor--dark-art">
           <img src="image/Tales.jpg" alt="Tales from the Lender">
         </div>
+        <a class="footer-sponsor" href="https://www.wasteconnections.com/" target="_blank" rel="noopener noreferrer">
+          <img src="image/Waste Connections.jpg" alt="Waste Connections">
+        </a>
       </div>
     </div>
   </section>
