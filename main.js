@@ -48,9 +48,9 @@ document.querySelector('[data-footer]').outerHTML = `
         <a class="footer-sponsor footer-sponsor--dark-art" href="https://urbaninterface.it.com" target="_blank" rel="noopener noreferrer">
           <img src="image/Urban-Interface.jpg" alt="Urban Interface">
         </a>
-        <div class="footer-sponsor footer-sponsor--dark-art">
+        <a class="footer-sponsor footer-sponsor--dark-art" href="https://1660690.my1003app.com/2215322/register?time=1792627579000" target="_blank" rel="noopener noreferrer">
           <img src="image/Tales.jpg" alt="Tales from the Lender">
-        </div>
+        </a>
         <a class="footer-sponsor" href="https://www.wasteconnections.com/" target="_blank" rel="noopener noreferrer">
           <img src="image/Waste Connections.jpg" alt="Waste Connections">
         </a>
