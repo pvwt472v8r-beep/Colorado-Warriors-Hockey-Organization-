@@ -78,6 +78,7 @@ document.querySelector('[data-footer]').outerHTML = `
     <p class="copyright">&copy; 2026 Colorado Warriors Hockey · 501(c)(3) nonprofit</p>
     <img class="footer-logo" src="image/Warriors Logo.jpg" alt="Colorado Warriors Hockey logo">
   </div>
+  <p class="container site-credit">Website designed and managed by <a href="https://urbaninterface.it.com/">Urban Interface</a></p>
 </footer>`;
 
 const header = document.querySelector('.site-header');
