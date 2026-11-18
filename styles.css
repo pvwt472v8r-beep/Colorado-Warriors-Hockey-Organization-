@@ -297,7 +297,7 @@ a.footer-sponsor:hover{transform:translateY(-3px);opacity:.8}
 .lightbox__error{margin:0;text-align:center}
 .lightbox__error[hidden],.lightbox__image[hidden]{display:none}
 .lightbox__prev:disabled,.lightbox__next:disabled{opacity:.4;cursor:default}
-.lightbox__caption{margin:.75rem 0 0;text-align:center}
+.lightbox__caption{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
 body.lightbox-open{overflow:hidden}
 .gallery-item figcaption{
   padding:.65rem .15rem 0;
