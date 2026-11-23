@@ -39,14 +39,17 @@
           <h3>Contact the team</h3>
           <p>
             <strong>Email:</strong>
-            <a href="mailto:Stephan@coloradowarriorshockey.org.org">Stephan@coloradowarriorshockey.org</a><br>
+            <a href="mailto:Stephan@coloradowarriorshockey.org">Stephan@coloradowarriorshockey.org</a><br>
             <strong>Location:</strong> Colorado Springs &amp; Denver, Colorado
           </p>
         </div>
       </div>
 
-      <form class="form reveal" action="mailto:info@example.org" method="post" enctype="text/plain">
+      <form class="form reveal" id="contact-form" method="post">
         <h3>Send us a message</h3>
+        <input type="hidden" name="_subject" value="New message from the Colorado Warriors website">
+        <input type="hidden" name="_autoresponse" value="Thank you for reaching out to Colorado Warriors Hockey! We have received your message and will be in touch as soon as we can.">
+        <input type="hidden" name="_cc" id="contact-cc" disabled>
 
         <label for="interest">I’m interested in
           <select id="interest" name="Interest" required>
@@ -64,7 +67,7 @@
         </label>
 
         <label for="email">Email
-          <input id="email" name="Email" type="email" autocomplete="email" required>
+          <input id="email" name="email" type="email" autocomplete="email" required>
         </label>
 
         <label for="phone">Phone (optional)
@@ -75,7 +78,9 @@
           <textarea id="message" name="Message" rows="5" required></textarea>
         </label>
 
-        <button class="btn" type="submit">Continue to email</button>
+        <p>Your message will be processed by FormSubmit. You may be asked to complete a verification before it is sent.</p>
+        <noscript><p>JavaScript is required to send this form. Please email <a href="mailto:Stephan@coloradowarriorshockey.org">Stephan@coloradowarriorshockey.org</a> instead.</p></noscript>
+        <button class="btn" type="submit" disabled>Send message</button>
       </form>
     </div>
   </section>
@@ -84,12 +89,13 @@
     <div class="container reveal">
       <h2>Not sure where to start?</h2>
       <p class="lead">That’s okay. Send us a note and we’ll help you figure out the next step.</p>
-      <a href="mailto:info@example.org" class="btn btn--white">Email the team</a>
+      <a href="mailto:Stephan@coloradowarriorshockey.org" class="btn btn--white">Email the team</a>
     </div>
   </section>
 </main>
 
 <div data-footer></div>
 <script src="main.js"></script>
+<script src="contact-form.js"></script>
 </body>
 </html>
