@@ -1,6 +1,22 @@
 # Colorado-Warriors-Hockey-Organization-
 New Redesign for the Colorado Warriors
 
+## Contact form
+
+The Get Involved form uses FormSubmit's standard POST flow, reCAPTCHA and
+automatic response. Playing and Something else go to Stephan with Hockey
+Operations copied; Volunteering goes to Business Operations; Sponsoring and
+Donating go to Fundraising. The routing is configured in `contact-form.js`.
+
+Before launch, submit a test for each of the three primary recipient addresses
+from the deployed site and have each recipient activate the form using the
+FormSubmit activation email. Then test all five choices with a real email address:
+confirm each recipient (including Hockey Operations for Playing and Something
+else) receives the right message, and the sender receives the automatic reply.
+Complete any verification prompted by FormSubmit. Check spam folders if needed.
+The form needs JavaScript to route messages; without it, visitors can use the
+email link on the page.
+
 ## Adding gallery photos
 
 In `photos.html`, add a `figure` inside `.gallery` with the appropriate
